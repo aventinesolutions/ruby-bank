@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :account
+  has_one :account, dependent: :destroy
   delegate :balance, to: :account
 
   validates :fullname, presence: true
