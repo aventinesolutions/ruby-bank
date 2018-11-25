@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :account
+  delegate :balance, to: :account
 
   validates :fullname, presence: true
 
