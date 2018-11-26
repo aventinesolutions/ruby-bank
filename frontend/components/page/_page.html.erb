@@ -1,4 +1,6 @@
 <div class="page">
   <%= yield %>
-  <%= c('account') %>
+  <div class="account-container">
+    <%= c('account', account: current_user.account) %>
+  </div>
 </div>

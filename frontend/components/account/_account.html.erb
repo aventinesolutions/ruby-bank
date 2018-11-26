@@ -1,4 +1,5 @@
 <div class="account">
-  <%= c('balance') %>
-  <%= c('transactions') %>
+  <%= c('balance', account: account) %>
+  <%= c('transfer-form') %>
+  <%= c('transactions', account: account) %>
 </div>

@@ -1,0 +1,53 @@
+.transfer-form {
+  display: flex;
+}
+
+.transfer-form .amount,
+.transfer-form .email {
+  flex: 0 1 auto;
+  padding: 1em;
+  border: 0.2em solid rgba(0, 0, 0, 0.1);
+  font-size: 110%;
+  outline: none;
+  transition: border-color 150ms;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.transfer-form .amount:hover,
+.transfer-form .amount:focus,
+.transfer-form .email:hover,
+.transfer-form .email:focus {
+  border: 0.2em solid darkgray;
+}
+
+legend {
+  font-size: 125%;
+  font-weight: bolder;
+}
+
+label,
+button {
+  margin: 0.5em;
+}
+
+button {
+  flex: 0 1 auto;
+  padding: 0.4em 1em;
+  background: steelblue;
+  border: 0.02em solid lightsteelblue;
+  color: white;
+  font-size: 110%;
+  outline: none;
+  transition: opacity 150ms;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+}
+
+button:active {
+  transform: translateY(0.2em);
+}
