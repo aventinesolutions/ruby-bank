@@ -1,5 +1,5 @@
 <div class="transactions">
-  <% @transactions.each do |transaction| %>
+  <% account.all_transactions.each do |transaction| %>
     <div class="transaction <%= transaction[:transaction_type] %>">
       <span class="type"><%= transaction[:transaction_type] %></span>
       <%= time_tag transaction[:created_at] %>

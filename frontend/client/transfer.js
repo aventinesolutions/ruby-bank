@@ -3,8 +3,8 @@ import createChannel from "./cable";
 let callback;
 
 const transferChannel = createChannel("TransferChannel", {
-  received({ transfer }) {
-    if (callback) callback.call(null, transfer);
+  received({ account }) {
+    if (callback) callback.call(null, account);
   }
 });
 
