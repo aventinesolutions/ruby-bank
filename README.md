@@ -1,24 +1,43 @@
-# README
+# Ruby Bank Coding Challenge
+version 1.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requires
+PostgreSQL
 
-Things you may want to cover:
+## Ruby Setup
+```shell
+$ rvm install 2.5.3
+$ rvm use 2.5.3@ruby-bank
+$ gem install bundler foreman
+$ bundle install
+```
 
-* Ruby version
 
-* System dependencies
+## PostgreSQL Setup
+As `postgres` super user:
+```shell
+$ createdb ruby-bank_development
+$ createdb ruby-bank_test
+```
 
-* Configuration
+## Database Schema
+```shell
+$ rake db:migrate db:test:prepare
+```
 
-* Database creation
+## Run Tests
+```shell
+$ rspec
+```
 
-* Database initialization
+## Run Servers
+```shell
+$ foreman start
+```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
+
