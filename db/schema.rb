@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2018_11_25_112647) do
   create_table "accounts", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.decimal "balance", precision: 12, scale: 2, default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
