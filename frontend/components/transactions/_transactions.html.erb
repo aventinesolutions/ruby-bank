@@ -1,0 +1,9 @@
+<div class="transactions">
+  <% @transactions.each do |transaction| %>
+    <div class="ẗransaction <%= transaction[:transaction_type] %>">
+      <span class="type"><%= transaction[:transaction_type] %></span>
+      <%= time_tag transaction[:created_at] %>
+      <span class="amount"><%= number_to_currency(transaction[:amount]) %></span>
+    </div>
+  <% end %>
+</div>

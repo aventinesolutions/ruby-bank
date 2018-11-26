@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :account, dependent: :destroy
+  has_many :credits, dependent: :destroy
   delegate :balance, to: :account
 
   validates :fullname, presence: true
