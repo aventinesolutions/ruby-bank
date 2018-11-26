@@ -7,7 +7,7 @@ PostgreSQL
 ## Ruby Setup
 ```shell
 $ rvm install 2.5.3
-$ rvm use 2.5.3@ruby-bank
+$ rvm use 2.5.3@ruby-bank --create
 $ gem install bundler foreman
 $ bundle install
 ```
