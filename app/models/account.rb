@@ -10,15 +10,11 @@ class Account < ApplicationRecord
   end
 
   def all_credits
-    (credits + transfers_to).map do |transaction|
-      transaction_attributes(transaction)
-    end
+    (credits + transfers_to).map(&method(:transaction_attributes))
   end
 
   def all_debits
-    transfers_from.map do |transaction|
-      transaction_attributes(transaction, :debit)
-    end
+    transfers_from.map { |transaction| transaction_attributes(transaction, :debit) }
   end
 
   private
