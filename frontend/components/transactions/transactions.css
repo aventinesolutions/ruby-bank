@@ -1,0 +1,24 @@
+.transactions .transaction {
+  text-align: left;
+  border: 0.1em solid #2e2f30;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.transactions .credit {
+  background-color: lightgreen;
+}
+
+.transactions .debit {
+  background-color: lightpink;
+}
+
+.transactions span,
+.transactions time {
+  padding: 2em;
+}
+
+.transactions .type {
+  text-transform: uppercase;
+  font-style: italic;
+}
