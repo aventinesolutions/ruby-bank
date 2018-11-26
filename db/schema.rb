@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 2018_11_26_152729) do
   end
 
   create_table "credits", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "account_id", null: false
     t.decimal "amount", precision: 12, scale: 2, default: "0.0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_credits_on_user_id"
+    t.index ["account_id"], name: "index_credits_on_account_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,5 +46,5 @@ ActiveRecord::Schema.define(version: 2018_11_26_152729) do
   end
 
   add_foreign_key "accounts", "users"
-  add_foreign_key "credits", "users"
+  add_foreign_key "credits", "accounts"
 end
