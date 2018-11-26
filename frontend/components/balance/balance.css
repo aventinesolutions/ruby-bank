@@ -1,0 +1,7 @@
+.balance {
+  text-align: center;
+  flex-basis: 50%;
+  border: 0.1em solid #2e2f30;
+  padding-bottom: 1em;
+  background-color: lightsteelblue;
+}
