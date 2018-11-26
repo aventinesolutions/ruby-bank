@@ -1,9 +1,18 @@
 <div class="transactions">
   <% @transactions.each do |transaction| %>
-    <div class="ẗransaction <%= transaction[:transaction_type] %>">
+    <div class="transaction <%= transaction[:transaction_type] %>">
       <span class="type"><%= transaction[:transaction_type] %></span>
       <%= time_tag transaction[:created_at] %>
       <span class="amount"><%= number_to_currency(transaction[:amount]) %></span>
+      <% if transaction[:transaction_type] == :debit %>
+        <span class="email">to: "<%= transaction[:to_email] %>"</span>
+      <% else %>
+        <% if transaction[:from_email] %>
+          <span class="email">from: "<%= transaction[:from_email] %>"</span>
+        <% else %>
+          <span class="email">bank credit</span>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
 </div>
