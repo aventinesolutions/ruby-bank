@@ -1,5 +1,7 @@
 import "./application.css";
 import "init";
+import "client/cable";
+import "client/transfer";
 import "components/page/page";
 import "components/account/account";
 import "components/balance/balance";
