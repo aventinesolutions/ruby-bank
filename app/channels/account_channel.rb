@@ -1,9 +1,15 @@
 class AccountChannel < ApplicationCable::Channel
   def subscribed
-    # stream_from "some_channel"
+    stream_from channel_handle
   end
 
-  def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
+  def send_transaction(payload)
+    ActionCable.server.broadcast channel_handle, account: render(current_user.account)
+  end
+
+  private
+
+  def channel_handle
+    "account_#{current_user.email}"
   end
 end
